@@ -41,44 +41,41 @@ export const projects: Project[] = [
   // ---------------------------------------------------------------------------
   // PROJECT 1 - DeblurGAN Web Application
   // ---------------------------------------------------------------------------
-  {
-    id: 'proj-1',
-    slug: 'image-deblurring-analysis',
-    title: 'Comparative Analysis of Image Deblurring',
-    description:
-      'A Flask web application for deblurring motion-blurred images using the DeblurGAN algorithm, featuring a user-friendly interface for selecting specific image regions or entire images.',
-    longDescription:
-      `This project implements a DeblurGAN-based image deblurring system with a user-friendly Flask web interface. 
-      Users can upload motion-blurred images and choose to deblur either a selected region or the entire image. 
-      The model was trained on the GOPRO dataset (2,103 image pairs) using a conditional GAN architecture. 
-      Key features include region-specific deblurring, real-time Visdom training monitoring, and support for various image resolutions. 
-      Built with Python, Flask, HTML/CSS/JavaScript, using PyTorch for the deep learning model and Conda for environment management.`,
-    thumbnail: '/projects/deblur-thumb.jpg',
-    images: [
-      '/projects/deblur-1.jpg',
-      '/projects/deblur-2.jpg',
-    ],
-    technologies: ['Python', 'Flask', 'PyTorch', 'DeblurGAN', 'HTML', 'CSS', 'JavaScript', 'Conda', 'Visdom'],
-    category: 'Research',
-    role: 'Project Lead & Developer',
-    duration: '3 months',
-    liveUrl: 'https://deblur-gan-web-flask.vercel.app',
-    githubUrl: 'https://github.com/CaseinBrt/DeblurGAN-WebFlask',
-    featured: true,
-    highlights: [
-      'Implemented DeblurGAN algorithm for motion blur removal',
-      'Built Flask web app with region-selection or full-image deblurring',
-      'Trained model on 2,103 image pairs from GOPRO dataset',
-      'Added low-level image processing with selective sharpening',
-      'Supported multiple image resolutions and batch processing',
-      'Collaborated with team members on model training and web integration',
-    ],
-    teamMembers: [
-      { name: 'Roberto Jr. Bricia Bayos', role: 'Project Lead & Developer', github: 'https://github.com/CaseinBrt' },
-      { name: 'Johnben Augustus A. Nadal', role: 'ML Engineer', github: 'https://github.com/urboyjaybee' },
-      { name: 'Randolf F. Brigola', role: 'Research & Data', github: 'https://github.com/randolf99' },
-    ],
-  },
+   {
+     id: 'proj-1',
+     slug: 'image-deblurring-analysis',
+     title: 'Comparative Analysis of Image Deblurring',
+     description:
+       'A Flask web application for deblurring motion-blurred images using the DeblurGAN algorithm, featuring a user-friendly interface for selecting specific image regions or entire images.',
+     longDescription:
+       `This project implements a DeblurGAN-based image deblurring system with a user-friendly Flask web interface. 
+       Users can upload motion-blurred images and choose to deblur either a selected region or the entire image. 
+       The model was trained on the GOPRO dataset (2,103 image pairs) using a conditional GAN architecture. 
+       Key features include region-specific deblurring, real-time Visdom training monitoring, and support for various image resolutions. 
+       Built with Python, Flask, HTML/CSS/JavaScript, using PyTorch for the deep learning model and Conda for environment management.`,
+     thumbnail: '/projects/deblur-thumb.jpg',
+     images: [],
+     technologies: ['Python', 'Flask', 'PyTorch', 'DeblurGAN', 'HTML', 'CSS', 'JavaScript', 'Conda', 'Visdom'],
+     category: 'Research',
+     role: 'Project Lead & Developer',
+     duration: '3 months',
+     liveUrl: 'https://deblur-gan-web-flask.vercel.app',
+     githubUrl: 'https://github.com/CaseinBrt/DeblurGAN-WebFlask',
+     featured: true,
+     highlights: [
+       'Implemented DeblurGAN algorithm for motion blur removal',
+       'Built Flask web app with region-selection or full-image deblurring',
+       'Trained model on 2,103 image pairs from GOPRO dataset',
+       'Added low-level image processing with selective sharpening',
+       'Supported multiple image resolutions and batch processing',
+       'Collaborated with team members on model training and web integration',
+     ],
+     teamMembers: [
+       { name: 'Roberto Jr. Bricia Bayos', role: 'Project Lead & Developer', github: 'https://github.com/CaseinBrt' },
+       { name: 'Johnben Augustus A. Nadal', role: 'ML Engineer', github: 'https://github.com/urboyjaybee' },
+       { name: 'Randolf F. Brigola', role: 'Research & Data', github: 'https://github.com/randolf99' },
+     ],
+   },
 
   // ---------------------------------------------------------------------------
   // PROJECT 2 - Echo of the Undead (3D Horror Game)
