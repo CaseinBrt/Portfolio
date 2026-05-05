@@ -27,7 +27,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="group relative cursor-pointer bg-white dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300"
     >
       {/* Thumbnail */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-48 overflow-hidden cursor-pointer">
         {/* Actual project image */}
         {project.thumbnail && !imageError ? (
           <Image sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
