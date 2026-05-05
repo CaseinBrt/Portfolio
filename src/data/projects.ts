@@ -29,6 +29,7 @@ export const projectCategories: string[] = [
   'Web Development',
   'Game Development',
   'Research',
+  'Inventory Management',
 ];
 
 export const projects: Project[] = [
@@ -90,6 +91,44 @@ export const projects: Project[] = [
       'Implemented player movement, enemy AI, and game mechanics in C#',
       'Created atmospheric visuals and sound design for horror theme',
       'Designed puzzle elements and progression systems',
+    ],
+  },
+
+  // ---------------------------------------------------------------------------
+  // LATEST PROJECT - System Inventory Management
+  // ---------------------------------------------------------------------------
+  {
+    id: 'proj-3',
+    slug: 'system-inventory',
+    title: 'System Inventory Management',
+    description:
+      'A full-stack inventory management system for tracking stock across multiple branches, with real-time dashboards, low-stock alerts, and transaction logging.',
+    longDescription:
+      `A comprehensive inventory management web application built with Next.js, TypeScript, and SQLite. 
+      The system supports multi-branch stock tracking, real-time dashboard statistics, low-stock alerts, 
+      and complete transaction history. Users can add/edit products, manage stock levels per branch, 
+      deduct stock with automatic logging, and export data to CSV. The app features a mobile-first 
+      dark-themed UI with bottom navigation, optimized for daily operations on the shop floor.`,
+    thumbnail: '/projects/inventory-thumb.jpg',
+    images: [
+      '/projects/inventory-1.jpg',
+      '/projects/inventory-2.jpg',
+    ],
+    technologies: ['Next.js', 'TypeScript', 'React', 'SQLite', 'Drizzle ORM', 'Tailwind CSS'],
+    category: 'Inventory Management',
+    role: 'Full-Stack Developer',
+    duration: '2 months',
+    liveUrl: 'https://system-inventory-brown.vercel.app',
+    githubUrl: 'https://github.com/CaseinBrt/System_Inventory',
+    featured: true,
+    highlights: [
+      'Multi-branch stock tracking across 3 locations (Eane 1, 2, 3)',
+      'Real-time dashboard with total products, stock counts, low-stock alerts',
+      'Low-stock threshold monitoring with visual alerts',
+      'Transaction logging for every stock deduction',
+      'CSV export for data portability',
+      'Mobile-first design with bottom navigation for field use',
+      'User authentication with login/registration system',
     ],
   },
 ];

@@ -25,6 +25,7 @@ export const skillCategories: string[] = [
   'Tools & Platforms',
   'Game Development',
   'Office & Design',
+  'Database & Backend',
 ];
 
 export const skills: Skill[] = [
@@ -68,10 +69,28 @@ export const skills: Skill[] = [
 
   // Frameworks & Libraries
   {
+    name: 'React',
+    level: 65,
+    category: 'Frameworks & Libraries',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'Next.js',
+    level: 60,
+    category: 'Frameworks & Libraries',
+    yearsOfExperience: 1,
+  },
+  {
     name: 'Flask',
     level: 55,
     category: 'Frameworks & Libraries',
     yearsOfExperience: 1,
+  },
+  {
+    name: 'Tailwind CSS',
+    level: 65,
+    category: 'Frameworks & Libraries',
+    yearsOfExperience: 2,
   },
 
   // Tools & Platforms
@@ -146,6 +165,12 @@ export const skills: Skill[] = [
     yearsOfExperience: 3,
   },
   {
+    name: 'Figma',
+    level: 60,
+    category: 'Office & Design',
+    yearsOfExperience: 1,
+  },
+  {
     name: 'Logo Design',
     level: 55,
     category: 'Office & Design',
@@ -161,6 +186,26 @@ export const skills: Skill[] = [
     name: 'Mockup Design',
     level: 55,
     category: 'Office & Design',
+    yearsOfExperience: 1,
+  },
+
+  // Database & Backend
+  {
+    name: 'SQLite',
+    level: 60,
+    category: 'Database & Backend',
+    yearsOfExperience: 1,
+  },
+  {
+    name: 'Drizzle ORM',
+    level: 55,
+    category: 'Database & Backend',
+    yearsOfExperience: 1,
+  },
+  {
+    name: 'Database Design',
+    level: 60,
+    category: 'Database & Backend',
     yearsOfExperience: 1,
   },
 ];
