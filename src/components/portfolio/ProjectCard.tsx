@@ -36,7 +36,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             onError={() => setImageError(true)}
-          />
         ) : (
           /* Fallback gradient */
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
