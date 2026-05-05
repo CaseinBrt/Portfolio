@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ExternalLink, Github, Calendar, User, CheckCircle } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, User, CheckCircle, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Badge, Button, Card, CardContent } from '@/components/ui';
 import type { Project } from '@/data/projects';
 
@@ -12,6 +13,23 @@ interface ProjectDetailProps {
 }
 
 export function ProjectDetail({ project }: ProjectDetailProps) {
+  const [galleryIndex, setGalleryIndex] = useState(0);
+  const [showGallery, setShowGallery] = useState(false);
+
+  const allImages = project.images && project.images.length > 0
+    ? [project.thumbnail, ...project.images]
+    : [project.thumbnail];
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setGalleryIndex((prev) => (prev + 1) % allImages.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setGalleryIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
+  };
+
   return (
     <div>
       {/* Back Link */}
@@ -30,7 +48,8 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8"
+            className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8 cursor-pointer"
+            onClick={() => setShowGallery(true)}
           >
             <Image
               src={project.thumbnail}
@@ -40,6 +59,10 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
             />
+            <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors" />
+            <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-2 py-1 rounded">
+              Click to view gallery
+            </div>
           </motion.div>
 
           {/* Title */}
@@ -99,6 +122,39 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               ))}
             </div>
           </motion.div>
+
+          {/* Team Members */}
+          {project.teamMembers && project.teamMembers.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="mt-8"
+            >
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                Team Members
+              </h2>
+              <div className="space-y-3">
+                {project.teamMembers.map((member, index) => (
+                  <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    {member.github ? (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        {member.name}
+                      </a>
+                    ) : (
+                      <span className="font-medium text-gray-900 dark:text-white">{member.name}</span>
+                    )}
+                    <span className="text-gray-500 dark:text-gray-400 text-sm">• {member.role}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
 
         {/* Sidebar */}
@@ -153,6 +209,64 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           </Card>
         </motion.div>
       </div>
+
+      {/* Image Gallery Modal */}
+      {showGallery && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={() => setShowGallery(false)}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setShowGallery(false)}
+            className="absolute top-4 right-4 p-2 text-white hover:text-gray-300 z-10"
+            aria-label="Close gallery"
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          {/* Navigation buttons */}
+          {allImages.length > 1 && (
+            <>
+              <button
+                onClick={prevImage}
+                className="absolute left-4 p-2 text-white hover:text-gray-300 z-10"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-8 h-8" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 p-2 text-white hover:text-gray-300 z-10"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-8 h-8" />
+              </button>
+            </>
+          )}
+
+          {/* Current image */}
+          <div
+            className="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center p-16"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={allImages[galleryIndex]}
+              alt={`${project.title} - Image ${galleryIndex + 1}`}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+          </div>
+
+          {/* Image counter */}
+          {allImages.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
+              {galleryIndex + 1} / {allImages.length}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
