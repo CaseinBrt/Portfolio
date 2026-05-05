@@ -75,11 +75,6 @@ function SkillChip({ skill }: { skill: Skill }) {
       <span className="font-medium text-gray-800 dark:text-gray-200 text-sm">
         {skill.name}
       </span>
-      {skill.yearsOfExperience && (
-        <span className="text-xs text-gray-500 dark:text-gray-400 tabular-nums">
-          {skill.yearsOfExperience}y
-        </span>
-      )}
     </motion.div>
   );
 }
