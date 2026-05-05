@@ -126,11 +126,8 @@ export const projects: Project[] = [
       and complete transaction history. Users can add/edit products, manage stock levels per branch, 
       deduct stock with automatic logging, and export data to CSV. The app features a mobile-first 
       dark-themed UI with bottom navigation, optimized for daily operations on the shop floor.`,
-    thumbnail: '/projects/inventory-thumb.jpg',
-    images: [
-      '/projects/inventory-1.jpg',
-      '/projects/inventory-2.jpg',
-    ],
+    thumbnail: '/projects/inventory-thumb.jpeg',
+    images: [],
     technologies: ['Next.js', 'TypeScript', 'React', 'SQLite', 'Drizzle ORM', 'Tailwind CSS'],
     category: 'Inventory Management',
     role: 'Full-Stack Developer',
