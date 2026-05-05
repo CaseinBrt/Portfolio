@@ -83,7 +83,7 @@ export const certifications: Certification[] = [
     id: 'cert-4',
     name: 'Naga City - DICT Roadshow (Game Industry)',
     issuer: 'Department of Information and Communications Technology (DICT)',
-    date: 'August 2022',
+    date: 'December 2022',
     credentialUrl: 'https://dict.gov.ph',
   },
 ];
