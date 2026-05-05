@@ -24,7 +24,7 @@ export interface Profile {
 export const profile: Profile = {
   name: 'Roberto Jr. Bricia Bayos',
   title: 'Computer Science Graduate',
-  photo: '', // Set to '/images/profile.jpg' after adding a photo
+  photo: '/images/profile.jpg',
   email: 'bertobayos98@gmail.com',
   phone: '+63 920 415 0967',
   location: 'San Isidro, Baao, Camarines Sur, Philippines',
