@@ -83,21 +83,20 @@ export default function PrintPage() {
         </div>
       </section>
 
-      {/* Education */}
-      <section className="mb-6">
-        <h2 className="text-lg font-bold mb-3 uppercase tracking-wide">Education</h2>
-        <div className="space-y-3">
-          {education.map((edu) => (
-            <div key={edu.id} className="flex justify-between">
-              <div>
-                <h3 className="font-semibold">{edu.degree} in {edu.field}</h3>
-                <p className="text-gray-600">{edu.school}</p>
-              </div>
-              <span className="text-sm text-gray-500">{edu.endYear}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+       {/* Education */}
+       <section className="mb-6">
+         <h2 className="text-lg font-bold mb-3 uppercase tracking-wide">Education</h2>
+         <div className="space-y-3">
+           {education.map((edu) => (
+             <div key={edu.id} className="flex justify-between">
+               <div>
+                 <h3 className="font-semibold">{edu.degree} in {edu.field}</h3>
+                 <p className="text-gray-600">{edu.school}</p>
+               </div>
+             </div>
+           ))}
+         </div>
+       </section>
 
       {/* Certifications */}
       <section className="mb-6">

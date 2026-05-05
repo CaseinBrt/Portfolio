@@ -60,7 +60,7 @@ export function generateTextResume(): string {
   lines.push('-'.repeat(40));
   education.forEach((edu) => {
     lines.push(`${edu.degree} in ${edu.field}`);
-    lines.push(`${edu.school}, ${edu.location} (${edu.endYear})`);
+    lines.push(`${edu.school}, ${edu.location}`);
     if (edu.gpa) lines.push(`GPA: ${edu.gpa}`);
     lines.push('');
   });

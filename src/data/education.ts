@@ -13,8 +13,6 @@ export interface Education {
   school: string;
   schoolLogo?: string;
   location: string;
-  startYear: number;
-  endYear: number;
   gpa?: string;
   honors?: string[];
   relevantCourses?: string[];
@@ -45,12 +43,10 @@ export const education: Education[] = [
     degree: 'Bachelor of Science',
     field: 'Computer Science',
     school: 'Camarines Sur Polytechnic Colleges',
-    schoolLogo: '/logos/cspc.png', // Add logo to /public/logos/ if available
+    schoolLogo: '/logos/cspc.png',
     location: 'San Miguel, Nabua, Camarines Sur',
-    startYear: 2018, // Approximate — adjust to your actual years
-    endYear: 2023, // Approximate — adjust to your actual graduation year
-    gpa: undefined, // Add if you want to display
-    honors: undefined, // Add if applicable
+    gpa: undefined,
+    honors: undefined,
     relevantCourses: [
       'Programming Fundamentals',
       'Data Structures and Algorithms',
@@ -66,28 +62,28 @@ export const certifications: Certification[] = [
     id: 'cert-1',
     name: 'Unlocking Insights: The Synergy of Machine Learning, IoT, and Big Data',
     issuer: 'Department of Information and Communications Technology (DICT)',
-    date: '2024-06',
+    date: '2024',
     credentialUrl: 'https://dict.gov.ph',
   },
   {
     id: 'cert-2',
     name: '12th Bicol Youth Congress in Information Technology (BYCIT)',
     issuer: 'DICT Bicol Region',
-    date: '2024-05',
+    date: '2024',
     credentialUrl: 'https://dict.gov.ph',
   },
   {
     id: 'cert-3',
     name: '11th Bicol Youth Congress in Information Technology (BYCIT)',
     issuer: 'DICT Bicol Region',
-    date: '2023-05',
+    date: '2023',
     credentialUrl: 'https://dict.gov.ph',
   },
   {
     id: 'cert-4',
-    name: 'Game Industry Seminar (Naga City - DICT Roadshow)',
+    name: 'Naga City - DICT Roadshow (Game Industry)',
     issuer: 'Department of Information and Communications Technology (DICT)',
-    date: '2022-10',
+    date: '2022',
     credentialUrl: 'https://dict.gov.ph',
   },
 ];
@@ -135,7 +131,7 @@ export function hasAwards(): boolean {
 }
 
 export function formatEducation(edu: Education): string {
-  return `${edu.degree} in ${edu.field} from ${edu.school} (${edu.endYear})`;
+  return `${edu.degree} in ${edu.field} from ${edu.school}`;
 }
 
 export function isCertificationExpiringSoon(cert: Certification): boolean {

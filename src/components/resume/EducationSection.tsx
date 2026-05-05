@@ -23,17 +23,17 @@ export function EducationSection() {
                   <div className="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
                     <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      {edu.degree} in {edu.field}
-                    </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-medium">
-                      {edu.school}
-                    </p>
-                    <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mt-1">
-                      <MapPin className="w-4 h-4" />
-                      {edu.location} · {edu.startYear} - {edu.endYear}
-                    </div>
+                   <div className="flex-1">
+                     <h3 className="font-semibold text-gray-900 dark:text-white">
+                       {edu.degree} in {edu.field}
+                     </h3>
+                     <p className="text-blue-600 dark:text-blue-400 font-medium">
+                       {edu.school}
+                     </p>
+                     <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mt-1">
+                       <MapPin className="w-4 h-4" />
+                       {edu.location}
+                     </div>
                     {edu.gpa && (
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                         GPA: {edu.gpa}
