@@ -41,22 +41,19 @@ export default function PrintPage() {
         <p className="text-gray-700">{profile.summary}</p>
       </section>
 
-      {/* Experience */}
-      <section className="mb-6">
-        <h2 className="text-lg font-bold mb-3 uppercase tracking-wide">Experience</h2>
-        <div className="space-y-4">
-          {experience.map((exp) => (
-            <div key={exp.id}>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-semibold">{exp.title}</h3>
-                  <p className="text-gray-600">{exp.company} • {exp.location}</p>
-                </div>
-                <span className="text-sm text-gray-500">
-                  {formatDate(exp.startDate)} – {exp.current ? 'Present' : formatDate(exp.endDate!)}
-                </span>
-              </div>
-              <ul className="list-disc list-inside mt-2 text-sm text-gray-700 space-y-1">
+       {/* Experience */}
+       <section className="mb-6">
+         <h2 className="text-lg font-bold mb-3 uppercase tracking-wide">Experience</h2>
+         <div className="space-y-4">
+           {experience.map((exp) => (
+             <div key={exp.id}>
+               <div className="flex justify-between items-start">
+                 <div>
+                   <h3 className="font-semibold">{exp.title}</h3>
+                   <p className="text-gray-600">{exp.company} • {exp.location}</p>
+                 </div>
+               </div>
+               <ul className="list-disc list-inside mt-2 text-sm text-gray-700 space-y-1">
                 {exp.achievements.slice(0, 3).map((achievement, i) => (
                   <li key={i}>{achievement}</li>
                 ))}

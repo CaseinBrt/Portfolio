@@ -36,7 +36,6 @@ export function generateTextResume(): string {
   lines.push('-'.repeat(40));
   experience.forEach((exp) => {
     lines.push(`${exp.title} at ${exp.company}`);
-    lines.push(`${formatDate(exp.startDate)} - ${exp.current ? 'Present' : formatDate(exp.endDate!)}`);
     lines.push(`${exp.location} | ${exp.type}`);
     exp.achievements.forEach((achievement) => {
       lines.push(`  • ${achievement}`);
