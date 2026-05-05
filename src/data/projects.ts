@@ -129,6 +129,7 @@ export const projects: Project[] = [
     category: 'Inventory Management',
     role: 'Full-Stack Developer',
     duration: '2 months',
+    liveUrl: 'https://system-inventory-brown.vercel.app',
     featured: true,
     highlights: [
       'Multi-branch stock tracking across 3 locations (Eane 1, 2, 3)',
