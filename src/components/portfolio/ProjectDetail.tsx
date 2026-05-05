@@ -60,7 +60,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
             />
             <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors" />
-            <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-2 py-1 rounded">
+            <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-2 py-1 rounded cursor-pointer">
               Click to view gallery
             </div>
           </motion.div>
