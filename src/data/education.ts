@@ -68,16 +68,16 @@ export const certifications: Certification[] = [
   {
     id: 'cert-2',
     name: '12th Bicol Youth Congress in Information Technology (BYCIT)',
-    issuer: 'DICT Bicol Region',
+    issuer: 'CSPC College of Computer Studies',
     date: '2024',
-    credentialUrl: 'https://dict.gov.ph',
+    credentialUrl: '',
   },
   {
     id: 'cert-3',
     name: '11th Bicol Youth Congress in Information Technology (BYCIT)',
-    issuer: 'DICT Bicol Region',
+    issuer: 'CSPC College of Computer Studies',
     date: '2023',
-    credentialUrl: 'https://dict.gov.ph',
+    credentialUrl: '',
   },
   {
     id: 'cert-4',
