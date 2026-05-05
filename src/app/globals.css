@@ -37,6 +37,16 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
+/* Interactive elements show hand cursor */
+button, [role="button"], .btn, a, input[type="submit"], input[type="button"], .cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Ensure non-interactive elements show default cursor */
+p, span, div:not([role="button"]):not(.btn):not([onclick]):not([class*="card"]):not([class*="Card"]) {
+  cursor: default !important;
+}
+
 /* Selection */
 ::selection {
   background-color: hsl(var(--primary) / 0.2);
