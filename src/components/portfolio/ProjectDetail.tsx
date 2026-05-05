@@ -230,14 +230,14 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             <>
               <button
                 onClick={prevImage}
-                className="absolute left-4 p-2 text-white hover:text-gray-300 z-10"
+                className="absolute left-4 p-2 text-white hover:text-gray-300 z-10 cursor-pointer"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-8 h-8" />
               </button>
               <button
                 onClick={nextImage}
-                className="absolute right-4 p-2 text-white hover:text-gray-300 z-10"
+                className="absolute right-4 p-2 text-white hover:text-gray-300 z-10 cursor-pointer"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-8 h-8" />
