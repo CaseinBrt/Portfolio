@@ -108,8 +108,14 @@ export const skills: Skill[] = [
     yearsOfExperience: 2,
   },
   {
-    name: 'Game Development',
-    level: 65,
+    name: '3D Game Development',
+    level: 60,
+    category: 'Game Development',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'C#',
+    level: 60,
     category: 'Game Development',
     yearsOfExperience: 2,
   },

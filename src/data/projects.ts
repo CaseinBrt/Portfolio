@@ -69,16 +69,16 @@ export const projects: Project[] = [
     description:
       'A survival horror game where the player must navigate and escape from a haunted forest using wits and resource management.',
     longDescription:
-      `"Echo of the Undead" is a 2D survival horror game built from the ground up using Unity and C#. 
+      `"Echo of the Undead" is a 3D survival horror game built from the ground up using Unity and C#. 
       The player must explore a mysterious forest, solve puzzles, avoid enemies, and find an exit. 
       The game emphasizes atmosphere, tension, and strategic decision-making. 
-      Developed as a showcase of game development skills including Unity physics, animation, AI, and UI/UX design.`,
+      Developed as a showcase of game development skills including Unity physics, 3D animation, AI, and UI/UX design.`,
     thumbnail: '/projects/echo-thumb.jpg', // Add image to /public/projects/
     images: [
       '/projects/echo-1.jpg',
       '/projects/echo-2.jpg',
     ],
-    technologies: ['Unity', 'C#', 'Game Development', '2D Animation'],
+    technologies: ['Unity', 'C#', '3D Game Development', '3D Modeling', 'Animation'],
     category: 'Game Development',
     role: 'Game Developer',
     duration: '4 months',
