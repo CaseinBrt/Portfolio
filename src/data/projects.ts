@@ -94,7 +94,7 @@ export const projects: Project[] = [
       The player must explore a mysterious forest, solve puzzles, avoid enemies, and find an exit. 
       The game emphasizes atmosphere, tension, and strategic decision-making. 
       Developed as a showcase of game development skills including Unity physics, 3D animation, AI, and UI/UX design.`,
-    thumbnail: '/projects/echo-thumb.jpeg',
+    thumbnail: '/projects/echo-thumb.jpg',
     images: [],
     technologies: ['Unity', 'C#', '3D Game Development', '3D Modeling', 'Animation'],
     category: 'Game Development',
