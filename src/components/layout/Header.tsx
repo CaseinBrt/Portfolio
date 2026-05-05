@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui';
+import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import { profile } from '@/data/profile';
 import { cn } from '@/lib/utils';
 
@@ -39,6 +40,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <ThemeToggle />
             <Button href="/print" size="sm">
               <Download className="w-4 h-4 mr-2" />
               Resume
@@ -46,13 +48,16 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
