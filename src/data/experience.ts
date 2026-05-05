@@ -34,11 +34,9 @@ export const experience: Experience[] = [
     description:
       'Managed research center systems and provided technical support, including website development, game development, and event logistics coordination.',
     achievements: [
-      'Built and maintained web applications for research projects',
       'Developed interactive games for educational and outreach events',
       'Troubleshot hardware and software issues to ensure smooth operations',
-      'Prepared and organized technical documentation for research activities',
-      'Assisted in event planning and on-site technical support during conferences',
+      'Helped prepare necessary documents for research activities',
     ],
     technologies: [
       'HTML',
