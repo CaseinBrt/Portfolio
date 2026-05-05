@@ -70,10 +70,10 @@ export const projects: Project[] = [
        'Collaborated with team members on model training and web integration',
      ],
      teamMembers: [
-       { name: 'Roberto Jr. Bricia Bayos', role: 'Project Lead & Developer', github: 'https://github.com/CaseinBrt' },
-       { name: 'Johnben Augustus A. Nadal', role: 'ML Engineer', github: 'https://github.com/urboyjaybee' },
-       { name: 'Randolf F. Brigola', role: 'Research & Data', github: 'https://github.com/randolf99' },
-     ],
+      { name: 'Roberto Jr. Bricia Bayos', role: 'Programmer', github: 'https://github.com/CaseinBrt' },
+      { name: 'Randolf F. Brigola', role: 'Research & Data', github: 'https://github.com/randolf99' },
+      { name: 'Johnben Augustus A. Nadal', role: 'Project Leader', github: 'https://github.com/urboyjaybee' },
+    ],
    },
 
   // ---------------------------------------------------------------------------
