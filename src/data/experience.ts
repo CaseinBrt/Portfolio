@@ -36,7 +36,7 @@ export const experience: Experience[] = [
     achievements: [
       'Developed interactive games for educational and outreach events',
       'Troubleshot hardware and software issues to ensure smooth operations',
-      'Helped prepare necessary documents for research activities',
+      'Helped prepare necessary documents',
     ],
     technologies: [
       'HTML',
