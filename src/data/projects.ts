@@ -59,7 +59,6 @@ export const projects: Project[] = [
      category: 'Research',
      role: 'Project Lead & Developer',
      duration: '3 months',
-     liveUrl: 'https://deblur-gan-web-flask.vercel.app',
      githubUrl: 'https://github.com/CaseinBrt/DeblurGAN-WebFlask',
      featured: true,
      highlights: [
