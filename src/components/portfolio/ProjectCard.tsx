@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { Badge, Button } from '@/components/ui';
@@ -13,6 +14,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   return (
     <motion.div
@@ -25,14 +27,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="group relative bg-white dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300"
     >
       {/* Thumbnail */}
-      <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-        {/* Placeholder gradient - replace with actual image when available */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white/50 text-4xl font-bold">
-            {project.title.substring(0, 2).toUpperCase()}
-          </span>
-        </div>
-        
+      <div className="relative h-48 overflow-hidden">
+        {/* Actual project image */}
+        {project.thumbnail && !imageError ? (
+          <Image
+            src={project.thumbnail}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            onError={() => setImageError(true)}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : (
+          /* Fallback gradient */
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+            <span className="text-white/50 text-4xl font-bold">
+              {project.title.substring(0, 2).toUpperCase()}
+            </span>
+          </div>
+        )}
+
         {/* Overlay on hover */}
         <motion.div
           initial={{ opacity: 0 }}

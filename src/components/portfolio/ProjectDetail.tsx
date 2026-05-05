@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Github, Calendar, User, CheckCircle } from 'lucide-react';
 import { Badge, Button, Card, CardContent } from '@/components/ui';
@@ -29,13 +30,16 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="relative h-64 md:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl overflow-hidden mb-8"
+            className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white/30 text-6xl font-bold">
-                {project.title.substring(0, 2).toUpperCase()}
-              </span>
-            </div>
+            <Image
+              src={project.thumbnail}
+              alt={project.title}
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
+            />
           </motion.div>
 
           {/* Title */}
