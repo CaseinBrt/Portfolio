@@ -135,9 +135,9 @@ export const siteConfig: SiteConfig = {
   // ---------------------------------------------------------------------------
   meta: {
     titleTemplate: '{{name}} | {{title}}',
-    defaultDescription: 'Professional resume and portfolio website',
-    keywords: ['resume', 'portfolio', 'developer', 'software engineer', 'web developer'],
-    siteUrl: 'https://your-domain.com',
+    defaultDescription: 'Computer Science graduate specializing in web development, game development, and data management. Passionate about building software that makes an impact.',
+    keywords: ['resume', 'portfolio', 'computer science', 'web developer', 'game developer', 'software engineer', 'Philippines'],
+    siteUrl: 'https://your-domain.com', // Update this to your actual domain
     locale: 'en',
   },
 
@@ -208,38 +208,18 @@ export const siteConfig: SiteConfig = {
       name: 'LinkedIn',
       icon: 'Linkedin',
       urlPattern: 'https://linkedin.com/in/{{username}}',
-      enabled: true,
+      enabled: false, // Enable if you have a LinkedIn profile
     },
     twitter: {
       name: 'Twitter',
       icon: 'Twitter',
       urlPattern: 'https://twitter.com/{{username}}',
-      enabled: true,
-    },
-    instagram: {
-      name: 'Instagram',
-      icon: 'Instagram',
-      urlPattern: 'https://instagram.com/{{username}}',
       enabled: false,
     },
-    youtube: {
-      name: 'YouTube',
-      icon: 'Youtube',
-      urlPattern: 'https://youtube.com/@{{username}}',
-      enabled: false,
-    },
-    dribbble: {
-      name: 'Dribbble',
-      icon: 'Dribbble',
-      urlPattern: 'https://dribbble.com/{{username}}',
-      enabled: false,
-    },
-    behance: {
-      name: 'Behance',
-      icon: 'Palette',
-      urlPattern: 'https://behance.net/{{username}}',
-      enabled: false,
-    },
+    instagram: { name: 'Instagram', icon: 'Instagram', urlPattern: 'https://instagram.com/{{username}}', enabled: false },
+    youtube: { name: 'YouTube', icon: 'Youtube', urlPattern: 'https://youtube.com/@{{username}}', enabled: false },
+    dribbble: { name: 'Dribbble', icon: 'Dribbble', urlPattern: 'https://dribbble.com/{{username}}', enabled: false },
+    behance: { name: 'Behance', icon: 'Palette', urlPattern: 'https://behance.net/{{username}}', enabled: true }, // Great for designers
   },
 
   // ---------------------------------------------------------------------------
