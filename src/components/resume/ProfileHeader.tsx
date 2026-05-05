@@ -10,7 +10,7 @@ export function ProfileHeader() {
       {/* Profile Photo */}
       <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg flex-shrink-0 bg-gray-200 dark:bg-gray-700">
         {profile.photo ? (
-          <Image
+          <Image sizes="(max-width: 160px) 100vw, 160px"
             src={profile.photo}
             alt={profile.name}
             fill

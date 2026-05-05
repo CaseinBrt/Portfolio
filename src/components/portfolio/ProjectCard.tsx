@@ -30,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="relative h-48 overflow-hidden">
         {/* Actual project image */}
         {project.thumbnail && !imageError ? (
-          <Image
+          <Image sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
             src={project.thumbnail}
             alt={project.title}
             fill

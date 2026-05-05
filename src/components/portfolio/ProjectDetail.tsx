@@ -51,7 +51,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8 cursor-pointer"
             onClick={() => setShowGallery(true)}
           >
-            <Image
+            <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
               src={project.thumbnail}
               alt={project.title}
               fill
@@ -250,12 +250,11 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             className="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center p-16"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
+            <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
               src={allImages[galleryIndex]}
               alt={`${project.title} - Image ${galleryIndex + 1}`}
               fill
               className="object-contain"
-              sizes="100vw"
             />
           </div>
 
