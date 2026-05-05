@@ -97,4 +97,5 @@ Edit `src/config/site.config.ts` → `features`:
 
 | Date | Activity |
 |------|----------|
+| 2026-05-05 | Fixed build errors: restored missing Image closing tag in ProjectCard and removed duplicate sizes attribute in ProjectDetail. Typecheck and lint passing; code deployed to Vercel. |
 | 2026-01-22 | Memory bank updated to match .kilocode standard structure |
